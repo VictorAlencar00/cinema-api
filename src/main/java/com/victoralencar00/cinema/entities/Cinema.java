@@ -1,5 +1,7 @@
 package com.victoralencar00.cinema.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -24,6 +26,6 @@ public class Cinema extends BaseEntity {
         this.name = name;
     }
 
-    @OneToMany(mappedBy = "cinema_room")
-    private Room room;
+    @OneToMany(mappedBy = "cinema")
+    private List<Room> rooms;
 }

@@ -26,7 +26,7 @@ public class Room extends BaseEntity {
     @OneToMany(mappedBy = "room")
     private List<Seat> seats;
 
-    @OneToMany(mappedBy = "session")
-    private Session session;
+    @OneToMany(mappedBy = "room")
+    private List<Session> session;
 
 }

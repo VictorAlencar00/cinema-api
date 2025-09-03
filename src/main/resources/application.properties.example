@@ -1,0 +1,13 @@
+//example file, for real use, please remove .example from the file name.
+
+spring.application.name=cinema
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/YourDBName
+spring.datasource.username=YourDBUser
+spring.datasource.password=YourDBPassword
+
+spring.jpa.hibernate.ddl-auto=update
+
+spring.jpa.show-sql=true
+
+spring.jpa.properties.hibernate.format_sql=true

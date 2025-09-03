@@ -4,6 +4,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
@@ -31,6 +33,6 @@ public class Session extends BaseEntity {
     private Room room;
 
     @OneToMany(mappedBy = "session")
-    private Order order;
+    private List<Order> orders;
 
 }

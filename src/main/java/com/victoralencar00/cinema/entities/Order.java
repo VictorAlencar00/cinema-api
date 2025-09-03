@@ -1,6 +1,8 @@
 package com.victoralencar00.cinema.entities;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -13,4 +15,7 @@ import lombok.Setter;
 @Table(name = "orders")
 public class Order extends BaseEntity {
 
+    @ManyToOne
+    @JoinColumn(name = "session_id")
+    private Session session;
 }
