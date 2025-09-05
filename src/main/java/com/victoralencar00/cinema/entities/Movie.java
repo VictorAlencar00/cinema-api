@@ -15,11 +15,16 @@ import lombok.Setter;
 @Entity
 @Table(name = "movies")
 public class Movie extends BaseEntity {
+    @EqualsAndHashCode.Include
+    @Override
+    public Long getId() {
+        return super.getId();
+    }
 
     private String title;
     private String genre;
     private int duration;
 
     @OneToMany(mappedBy = "movie")
-    private List<Session> session;
+    private List<Session> sessions;
 }

@@ -15,6 +15,11 @@ import lombok.Setter;
 @Entity
 @Table(name = "cinemas")
 public class Cinema extends BaseEntity {
+    @EqualsAndHashCode.Include
+    @Override
+    public Long getId() {
+        return super.getId();
+    }
 
     private String name;
 

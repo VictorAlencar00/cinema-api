@@ -14,6 +14,11 @@ import lombok.Setter;
 @Entity
 @Table(name = "orders")
 public class Order extends BaseEntity {
+    @EqualsAndHashCode.Include
+    @Override
+    public Long getId() {
+        return super.getId();
+    }
 
     @ManyToOne
     @JoinColumn(name = "session_id")

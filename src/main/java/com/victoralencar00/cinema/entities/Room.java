@@ -18,6 +18,11 @@ import lombok.Setter;
 @Entity
 @Table(name = "rooms")
 public class Room extends BaseEntity {
+    @EqualsAndHashCode.Include
+    @Override
+    public Long getId() {
+        return super.getId();
+    }
 
     @ManyToOne
     @JoinColumn(name = "cinema_id")
@@ -27,6 +32,6 @@ public class Room extends BaseEntity {
     private List<Seat> seats;
 
     @OneToMany(mappedBy = "room")
-    private List<Session> session;
+    private List<Session> sessions;
 
 }
